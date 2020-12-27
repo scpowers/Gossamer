@@ -1,1 +1,1 @@
-# Gossamer: Build lightweight hybrid (SNN/ANN) neural networks in Go
+# Gossamer: Build lightweight hybrid neural networks (SNN/ANN) in Go
