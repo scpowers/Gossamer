@@ -2,14 +2,14 @@ package Gossamer
 
 // define Neuron interface to get polymorphism-like behavior
 type Neuron interface {
-	GetSynapses() ([]int, []int)
+	GetSynapses() ([]Synapse, []Synapse)
 }
 
 // define baseline neuron struct
 type RegularNeuron struct {
 	// universal properties
-	SynIn  []int
-	SynOut []int
+	SynIn  []Synapse
+	SynOut []Synapse
 }
 
 // define spiking neuron struct
@@ -34,6 +34,6 @@ func NewSpikingNeuron() *SpikingNeuron {
 }
 
 // get synapses of a neuron
-func (n *RegularNeuron) GetSynapses() ([]int, []int) {
+func (n *RegularNeuron) GetSynapses() ([]Synapse, []Synapse) {
 	return n.SynIn, n.SynOut
 }
